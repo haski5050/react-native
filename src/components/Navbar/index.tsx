@@ -1,9 +1,9 @@
-import styled from 'styled-components/native';
-import React from 'react';
+import React from 'react'
+import { NavbarContainer, Button } from './styles'
 
 const Navbar = () => {
   return (
-    <Area>
+    <NavbarContainer>
       <Button
         source={{
           width: 100,
@@ -39,21 +39,8 @@ const Navbar = () => {
           uri: 'https://img.icons8.com/ios/50/000000/user-male-circle.png',
         }}
       />
-    </Area>
-  );
-};
+    </NavbarContainer>
+  )
+}
 
-export default Navbar;
-
-const Area = styled.View`
-  flex-direction: row;
-  margin-top: auto;
-  justify-content: space-between;
-  border-top-color: black;
-  border-top-width: 1px;
-`;
-const Button = styled.Image`
-  width: 40px;
-  height: 40px;
-  margin: 0 5px 0 5px;
-`;
+export default Navbar

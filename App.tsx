@@ -8,30 +8,30 @@
  * @format
  */
 
-import React from 'react';
-import {ScrollView} from 'react-native';
-import styled from 'styled-components/native';
-import Logo from './app/components/Logo';
-import Navbar from './app/components/Navbar';
-import Post from './app/components/Post';
-import Stories from './app/components/Stories';
+import React from 'react'
+import { SafeAreaView, ScrollView } from 'react-native'
+import { Logo, Navbar, Post, Stories } from './src/components/index'
 
 const App = () => {
   return (
-    <Container>
+    <SafeAreaView>
       <Logo>Instagram</Logo>
       <ScrollView>
         <Stories />
-        <Post>gordonius</Post>
-        <Post>ricardo</Post>
+        <Post
+          name="gordonius"
+          avatar="https://gordonua.com/img/article/15526/86_tn.jpg?v1620816246"
+          photo="https://m.day.kyiv.ua/sites/default/files/main/articles/24022017/30gordon.jpg"
+        />
+        <Post
+          name="ricardo"
+          avatar="http://images.shoutwiki.com/ytp/9/97/%D0%A0%D0%B8%D0%BA%D0%B0%D1%80%D0%B4%D0%BE_%D0%9C%D0%B8%D0%BB%D0%BE%D1%81.jpg"
+          photo="https://i.uaportal.com/2019/4/16/22.jpg"
+        />
       </ScrollView>
       <Navbar />
-    </Container>
-  );
-};
+    </SafeAreaView>
+  )
+}
 
-const Container = styled.SafeAreaView`
-  flex-direction: column;
-`;
-
-export default App;
+export default App
