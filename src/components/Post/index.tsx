@@ -1,15 +1,15 @@
 import React from 'react'
+import { Image } from 'react-native'
 import { UserImage } from '../Stories/styles'
 import { widthPercentageToDP as wp } from 'react-native-responsive-screen'
 import {
   Button,
   MoreButton,
   Name,
-  PostImage,
-  PostMenuContainer,
+  MenuContainer,
   SaveButton,
-  UserPostContainer,
   PostContainer,
+  Container,
 } from './styles'
 
 interface PostProps {
@@ -20,8 +20,8 @@ interface PostProps {
 
 const Post = ({ name, avatar, photo }: PostProps) => {
   return (
-    <PostContainer>
-      <UserPostContainer>
+    <Container>
+      <PostContainer>
         <UserImage
           other
           source={{
@@ -38,15 +38,15 @@ const Post = ({ name, avatar, photo }: PostProps) => {
             uri: 'https://img.icons8.com/ios-filled/50/000000/more.png',
           }}
         />
-      </UserPostContainer>
-      <PostImage
+      </PostContainer>
+      <Image
         source={{
           width: wp(100),
           height: 400,
           uri: photo,
         }}
       />
-      <PostMenuContainer>
+      <MenuContainer>
         <Button
           source={{
             width: 100,
@@ -75,8 +75,8 @@ const Post = ({ name, avatar, photo }: PostProps) => {
             uri: 'https://img.icons8.com/ios/50/000000/bookmark-ribbon--v1.png',
           }}
         />
-      </PostMenuContainer>
-    </PostContainer>
+      </MenuContainer>
+    </Container>
   )
 }
 

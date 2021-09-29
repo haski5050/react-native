@@ -1,10 +1,14 @@
-import React, { FC } from 'react'
-import { DirectButton, LogoContainer, LogoName } from './styles'
+import React from 'react'
+import { Container, DirectButton,  LogoName } from './styles'
 
-const Logo: FC = ({ children }) => {
+interface LogoProps {
+  name: string
+}
+
+const Logo = ({ name }: LogoProps) => {
   return (
-    <LogoContainer>
-      <LogoName>{children}</LogoName>
+    <Container>
+      <LogoName>{name}</LogoName>
       <DirectButton
         source={{
           width: 100,
@@ -12,7 +16,7 @@ const Logo: FC = ({ children }) => {
           uri: 'https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-send-email-flatart-icons-outline-flatarticons.png',
         }}
       />
-    </LogoContainer>
+    </Container>
   )
 }
 

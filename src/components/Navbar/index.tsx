@@ -1,9 +1,9 @@
 import React from 'react'
-import { NavbarContainer, Button } from './styles'
+import { Container, Button } from './styles'
 
 const Navbar = () => {
   return (
-    <NavbarContainer>
+    <Container>
       <Button
         source={{
           width: 100,
@@ -39,7 +39,7 @@ const Navbar = () => {
           uri: 'https://img.icons8.com/ios/50/000000/user-male-circle.png',
         }}
       />
-    </NavbarContainer>
+    </Container>
   )
 }
 
