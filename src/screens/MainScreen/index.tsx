@@ -1,8 +1,11 @@
 import React from 'react'
-import { SafeAreaView, ScrollView } from 'react-native'
-import { Logo, Navbar, Post, Stories } from '../components/index'
+import { useNavigation } from '@react-navigation/native'
+import { Logo, Navbar, Post, Stories } from 'components'
+import { Container, ContentContainer } from './styles'
 
 const MainScreen = () => {
+  const navigation = useNavigation<any>()
+
   const photos = [
     'https://avatarko.ru/img/kartinka/2/Gubka_Bob.jpg',
     'https://www.meme-arsenal.com/memes/0f8248f0809b1231a56fa7a18c24796f.jpg',
@@ -13,10 +16,15 @@ const MainScreen = () => {
     'https://vesti.kz/userdata/news/news_94327/crop_b/photo_3169.jpg',
   ]
 
+  const onLogoPress = () => {
+    console.log('zalupa')
+    navigation.navigate('Direct', { name: 'some text' })
+  }
+
   return (
-    <SafeAreaView>
-      <Logo name="Instagram" />
-      <ScrollView>
+    <Container>
+      <Logo name="Instagram" onPress={onLogoPress} />
+      <ContentContainer>
         <Stories {...{ photos }} />
         <Post
           name="gordonius"
@@ -28,9 +36,9 @@ const MainScreen = () => {
           avatar="http://images.shoutwiki.com/ytp/9/97/%D0%A0%D0%B8%D0%BA%D0%B0%D1%80%D0%B4%D0%BE_%D0%9C%D0%B8%D0%BB%D0%BE%D1%81.jpg"
           photo="https://i.uaportal.com/2019/4/16/22.jpg"
         />
-      </ScrollView>
+      </ContentContainer>
       <Navbar />
-    </SafeAreaView>
+    </Container>
   )
 }
 

@@ -13,8 +13,6 @@ const Stories = ({ photos }: StoriesProps) => {
           <UserImage
             key={index}
             source={{
-              width: 100,
-              height: 100,
               uri: photo,
             }}
           />
