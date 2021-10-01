@@ -2,9 +2,10 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Logo, Navbar, Post, Stories } from 'components'
 import { Container, ContentContainer } from './styles'
+import { HomeSceenNavigationProps } from 'screens/routes'
 
 const MainScreen = () => {
-  const navigation = useNavigation<any>()
+  const navigation = useNavigation<HomeSceenNavigationProps>()
 
   const photos = [
     'https://avatarko.ru/img/kartinka/2/Gubka_Bob.jpg',
@@ -16,10 +17,7 @@ const MainScreen = () => {
     'https://vesti.kz/userdata/news/news_94327/crop_b/photo_3169.jpg',
   ]
 
-  const onLogoPress = () => {
-    console.log('zalupa')
-    navigation.navigate('Direct', { name: 'some text' })
-  }
+  const onLogoPress = () => navigation.navigate('Direct', { name: 'some text' })
 
   return (
     <Container>

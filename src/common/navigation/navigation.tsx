@@ -1,9 +1,9 @@
 import React from 'react'
-import { MainScreen, DirectScreen } from 'screens'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
+import { MainScreen, DirectScreen } from 'screens'
 
-type StackParamList = {
+export type StackParamList = {
   Home: undefined
   Direct: {
     name: string

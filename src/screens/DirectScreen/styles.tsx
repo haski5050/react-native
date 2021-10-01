@@ -7,6 +7,6 @@ import {
 export const Container = styled.SafeAreaView``
 
 export const ScreenImage = styled.Image`
-  width: ${wp(100)};
-  height: ${hp(100)};
+  width: ${wp(100)}px;
+  height: ${hp(100)}px;
 `
