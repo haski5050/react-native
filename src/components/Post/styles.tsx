@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import { Text } from 'uikit/atoms'
 
 export const Container = styled.View`
   margin-bottom: 10px;
@@ -9,9 +10,10 @@ export const PostContainer = styled.View`
   align-items: center;
 `
 
-export const Name = styled.Text`
+export const Name = styled(Text).attrs({
+  type: 'normal',
+})`
   margin-left: 5px;
-  font-size: 25px;
 `
 
 export const MoreButton = styled.Image`

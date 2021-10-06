@@ -1,8 +1,14 @@
 import React from 'react'
-import Navigate from './src/common/navigation/navigation'
+import Navigate from 'common/navigation'
+import { ThemeProvider } from 'styled-components/native'
+import { defaultTheme } from 'uikit/styles/themes'
 
 const App = () => {
-  return <Navigate />
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Navigate />
+    </ThemeProvider>
+  )
 }
 
 export default App

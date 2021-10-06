@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import { Text } from 'uikit/atoms'
 
 export const Container = styled.View`
   flex-direction: row;
@@ -7,11 +8,10 @@ export const Container = styled.View`
   background-color: #f2f3f4;
 `
 
-export const LogoName = styled.Text`
-  font-size: 40px;
-  font-weight: 300;
-  font-family: 'cursive';
-`
+export const LogoName = styled(Text).attrs({
+  type: 'large',
+  weight: 'italic',
+})``
 
 export const DirectButton = styled.Image`
   margin-left: auto;
